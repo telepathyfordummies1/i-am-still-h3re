@@ -53,11 +53,12 @@
 
   <script>
     function check() {
-      const password = "yourPasswordHere"; // <-- set your password
+      const password = "acceptance"; // <-- set your password
       const input = document.getElementById("pw").value;
 
-      if (input === password) {
-        window.location.href = "story.html"; // go to story
+      if(input.toLowerCase() === password.toLowerCase()) {
+        alert("Access granted!");
+        window.location.href = "story.html"; // redirect to story page
       } else {
         document.getElementById("msg").textContent = "Incorrect password.";
       }
